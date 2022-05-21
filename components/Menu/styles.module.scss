@@ -1,0 +1,47 @@
+@import "../../styles/variables.module.scss";
+
+$menu-size: 5.5rem;
+
+.menu {
+  background-color: $dark-gray;
+  border-bottom: 5px solid $light-turquoise;
+  padding: 0.5rem 2.8rem 0.5rem 2.8rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  transition: margin-top 1s;
+  margin-top: 0rem;
+
+  position: fixed;
+  top: 0;
+
+  &.menuHidden {
+    margin-top: -$menu-size;
+  }
+
+  & .logoWrappers {
+    width: 30%;
+  }
+
+  & .menuItens {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    & .menuItem {
+      color: $light-turquoise;
+      padding: 0.5rem;
+      border-radius: 100rem;
+      min-width: 200px;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+        background-color: $light-turquoise;
+        transition: background-color 0.8s;
+        color: $dark-gray;
+      }
+    }
+  }
+}
