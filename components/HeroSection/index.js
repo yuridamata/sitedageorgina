@@ -2,9 +2,8 @@ import styles from "./styles.module.scss";
 import Logo from "../../public/logoGeorgina.png";
 import Image from "next/image";
 
-const HeroSection = ({ heroHeight }) => {
+const HeroSection = ({ scrollToAboutUs }) => {
   return (
-    
     <section className={styles.heroSection}>
       <div className={styles.content}>
         <div>
@@ -12,7 +11,7 @@ const HeroSection = ({ heroHeight }) => {
         </div>
       </div>
       <div className={styles.callToAction}>
-        <a>
+        <a onClick={() => scrollToAboutUs()}>
           <p>Nos conheça</p>
           <p className={styles.arrow}> &#x27A4; </p>
         </a>

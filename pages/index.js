@@ -14,7 +14,7 @@ export default function Home() {
   const aboutUsRef = useRef(null);
 
   const scrollToRef = (ref) => {
-    window.scrollTo({ top: ref.current.offsetTop - 100, behavior: "smooth" });
+    window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -41,7 +41,12 @@ export default function Home() {
           }}
           scrollFunc={scrollToRef}
         />
-        <HeroSection heroHeight={heroHeight} />
+        <HeroSection
+          
+          scrollToAboutUs={() => {
+            scrollToRef(aboutUsRef);
+          }}
+        />
         <AboutUs ref={aboutUsRef} />
       </main>
 
