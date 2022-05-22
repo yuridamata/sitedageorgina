@@ -20,6 +20,7 @@ const Menu = ({ showMenuOn, refs, scrollFunc }) => {
     },
     {
       display: "Catálogo",
+      ref: refs.catalogRef,
     },
     {
       display: "Contato",

@@ -1,0 +1,39 @@
+.catalog {
+  padding: 10.25rem 5.6rem;
+  & h1 {
+    text-align: center;
+    margin-bottom: 14.8rem;
+  }
+
+  & .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .category {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      margin: 0rem 2rem;
+
+      & .titleWrapper{
+        min-height: 6rem;
+      }
+      & h2 {
+        text-align: center;
+        
+        font-size: 1.37rem;
+        max-width: 11.68rem;
+        
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      & .imgCategory {
+        min-width: 17.87rem;
+        min-height: 17.87rem;
+        background-color: #C4C4C4;
+      }
+    }
+  }
+}

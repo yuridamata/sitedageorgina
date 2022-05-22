@@ -7,6 +7,7 @@ import HeroSection from "../components/HeroSection";
 import AboutUs from "../components/AboutUs";
 import Divider from "../components/Divider";
 import HowItWorks from "../components/HowItWorks";
+import Catalog from "../components/Catalog";
 
 const heroHeight = 700;
 
@@ -15,6 +16,7 @@ export default function Home() {
 
   const aboutUsRef = useRef(null);
   const howItWorksRef = useRef(null);
+  const catalogRef = useRef(null);
 
   const scrollToRef = (ref) => {
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
@@ -42,6 +44,7 @@ export default function Home() {
           refs={{
             aboutUsRef,
             howItWorksRef,
+            catalogRef,
           }}
           scrollFunc={scrollToRef}
         />
@@ -53,6 +56,8 @@ export default function Home() {
         <AboutUs ref={aboutUsRef} />
         <Divider />
         <HowItWorks ref={howItWorksRef} />
+        <Divider />
+        <Catalog ref={catalogRef} />
       </main>
 
       <footer>Footer</footer>
