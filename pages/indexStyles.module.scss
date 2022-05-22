@@ -1,9 +1,11 @@
+@import "../styles/variables.module.scss";
 .loadingMain {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-.main{
+.main {
   height: 1500px;
+  color: $dark-gray;
 }
