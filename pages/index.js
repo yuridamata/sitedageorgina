@@ -3,12 +3,13 @@ import Head from "next/head";
 import Loading from "../components/Loading";
 import styles from "./indexStyles.module.scss";
 import Menu from "../components/Menu";
+import HeroSection from "../components/HeroSection";
 
-const heroHeight = 300;
+const heroHeight = 700;
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
+
 
   useEffect(() => {
     if (loading === true) {
@@ -17,18 +18,6 @@ export default function Home() {
       }, 3000);
     }
   }, [loading]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollY]);
 
   return (
     <div className={loading === true ? styles.loadingMain : styles.main}>
@@ -39,7 +28,8 @@ export default function Home() {
       </Head>
       <Loading loading={loading} />
       <main>
-        <Menu scrollY={scrollY} heroHeight={heroHeight} />        
+        <Menu scrollY={scrollY} showMenuOn={heroHeight / 3} />
+        <HeroSection heroHeight={heroHeight} />
       </main>
 
       <footer>Footer</footer>

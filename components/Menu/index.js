@@ -20,11 +20,24 @@ const menuItems = [
   },
 ];
 
-const Menu = ({ heroHeight, scrollY }) => {
+const Menu = ({ showMenuOn }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    if (scrollY > heroHeight) {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollY >= showMenuOn) {
       setShowMenu(true);
     } else {
       setShowMenu(false);
