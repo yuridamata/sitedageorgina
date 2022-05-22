@@ -5,6 +5,7 @@ import styles from "./indexStyles.module.scss";
 import Menu from "../components/Menu";
 import HeroSection from "../components/HeroSection";
 import AboutUs from "../components/AboutUs";
+import Divider from "../components/Divider";
 
 const heroHeight = 700;
 
@@ -42,12 +43,12 @@ export default function Home() {
           scrollFunc={scrollToRef}
         />
         <HeroSection
-          
           scrollToAboutUs={() => {
             scrollToRef(aboutUsRef);
           }}
         />
         <AboutUs ref={aboutUsRef} />
+        <Divider />
       </main>
 
       <footer>Footer</footer>

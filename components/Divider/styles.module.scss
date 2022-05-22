@@ -1,0 +1,8 @@
+@import "../../styles/variables.module.scss";
+
+.divider {
+  background: $dark-gray url("../../public/padraoFundoDivider.png");
+  min-height: 6.25rem;
+  border-top: 0.625rem solid $light-turquoise;
+  border-bottom: 0.625rem solid $light-turquoise;
+}
