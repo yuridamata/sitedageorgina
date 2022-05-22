@@ -36,6 +36,7 @@ const Contacts = (props, ref) => {
             <a
               href="https://www.instagram.com/instadageorgina/"
               target={"_blank"}
+              rel="noreferrer"
             >
               Nos siga no Instagram
             </a>

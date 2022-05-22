@@ -37,7 +37,7 @@ const HowItWorks = (props, ref) => {
       {instructions.map((instruction, index) => {
         return (
           <div
-          key={`instruction-${index}`}
+            key={`instruction-${index}`}
             className={`${styles.instruction}  ${
               index % 2 === 0 ? styles.even : styles.odd
             }`}
@@ -49,8 +49,10 @@ const HowItWorks = (props, ref) => {
             >
               <h2>{instruction.title}</h2>
               <div className={styles.txt}>
-                {instruction.text.map((paragraph) => {
-                  return <p>{paragraph}</p>;
+                {instruction.text.map((paragraph, index) => {
+                  return (
+                    <p key={`instruction-paragraph-${index}`}>{paragraph}</p>
+                  );
                 })}
               </div>
             </div>
