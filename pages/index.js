@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Loading from "../components/Loading";
 import styles from "./indexStyles.module.scss";
@@ -10,6 +10,12 @@ const heroHeight = 700;
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+
+  const aboutUsRef = useRef(null);
+
+  const scrollToRef = (ref) => {
+    window.scrollTo({ top: ref.current.offsetTop - 100, behavior: "smooth" });
+  };
 
   useEffect(() => {
     if (loading === true) {
@@ -28,9 +34,15 @@ export default function Home() {
       </Head>
       <Loading loading={loading} />
       <main>
-        <Menu showMenuOn={heroHeight / 3} />
+        <Menu
+          showMenuOn={heroHeight / 3}
+          refs={{
+            aboutUsRef,
+          }}
+          scrollFunc={scrollToRef}
+        />
         <HeroSection heroHeight={heroHeight} />
-        <AboutUs />
+        <AboutUs ref={aboutUsRef} />
       </main>
 
       <footer>Footer</footer>

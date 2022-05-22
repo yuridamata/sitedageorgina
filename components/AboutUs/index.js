@@ -1,8 +1,9 @@
 import styles from "./styles.module.scss";
+import { forwardRef } from "react";
 
-const AboutUs = () => {
+const AboutUs = (props, ref) => {
   return (
-    <section className={styles.aboutUs}>
+    <section ref={ref} className={styles.aboutUs}>
       <div className={styles.ourHistory}>
         <h1>Sobre Nós</h1>
         <div className={styles.txtBox}>
@@ -34,4 +35,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default forwardRef(AboutUs);

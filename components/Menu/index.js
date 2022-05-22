@@ -5,24 +5,25 @@ import { useState, useEffect } from "react";
 import Logo from "../../public/logoGeorginamin.png";
 import styles from "./styles.module.scss";
 
-const menuItems = [
-  {
-    display: "Sobre Nós",
-  },
-  {
-    display: "Como Funciona",
-  },
-  {
-    display: "Catálogo",
-  },
-  {
-    display: "Contato",
-  },
-];
-
-const Menu = ({ showMenuOn }) => {
+const Menu = ({ showMenuOn, refs, scrollFunc }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+
+  const menuItems = [
+    {
+      display: "Sobre Nós",
+      ref: refs.aboutUsRef,
+    },
+    {
+      display: "Como Funciona",
+    },
+    {
+      display: "Catálogo",
+    },
+    {
+      display: "Contato",
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +53,15 @@ const Menu = ({ showMenuOn }) => {
       <ul className={styles.menuItens}>
         {menuItems.map((menuItem, index) => {
           return (
-            <li key={`menu-item-${index}`} className={styles.menuItem}>
+            <li
+              key={`menu-item-${index}`}
+              className={styles.menuItem}
+              onClick={() => {
+                if (menuItem.ref) {
+                  scrollFunc(menuItem.ref);
+                }
+              }}
+            >
               {menuItem.display}
             </li>
           );
