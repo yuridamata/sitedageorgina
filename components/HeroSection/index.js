@@ -5,7 +5,7 @@ import Image from "next/image";
 const HeroSection = ({ heroHeight }) => {
   return (
     // minHeight is defined here because it's necessary on Menu behaviour
-    <div className={styles.heroSection} style={{ minHeight: heroHeight }}>
+    <section className={styles.heroSection} style={{ minHeight: heroHeight }}>
       <div className={styles.content}>
         <div>
           <Image src={"/logoGeorgina.png"} width={654} height={340} />
@@ -17,7 +17,7 @@ const HeroSection = ({ heroHeight }) => {
           <p className={styles.arrow}> &#x27A4; </p>
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 
