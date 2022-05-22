@@ -13,14 +13,14 @@ const Contacts = (props, ref) => {
           </div>
           <div className={`${styles.contactElement} ${styles.email}`}>
             <img src={"/icons/mail.svg"} />
-            <a href="mailto:emaildageorgina@gmail.com" target={"_blank"}>
+            <a href="mailto:emaildageorgina@gmail.com" target={"_blank"} rel="noreferrer">
               emaildageorgina@gmail.com
             </a>
           </div>
 
           <div className={styles.contactElement}>
             <img src={"/icons/map.svg"} />
-            <a href="https://goo.gl/maps/HAwZQdegMT48W8hT7" target={"_blank"}>
+            <a href="https://goo.gl/maps/HAwZQdegMT48W8hT7" target={"_blank"} rel="noreferrer">
               CLN 405, Bloco D Loja 52{" "}
             </a>
           </div>
@@ -29,7 +29,7 @@ const Contacts = (props, ref) => {
         <div className={styles.contactsBlock}>
           <div className={styles.contactElement}>
             <img src={"/icons/whatsapp.svg"} />
-            <a href="https://wa.me/556194356776" target={"_blank"}>Converse conosco</a>
+            <a href="https://wa.me/556194356776" target={"_blank"} rel="noreferrer">Converse conosco</a>
           </div>
           <div className={styles.contactElement}>
             <img src={"/icons/instagram.svg"} />
@@ -44,6 +44,7 @@ const Contacts = (props, ref) => {
             <img src={"/icons/mapMark.svg"} />
             <a
               target={"_blank"}
+              rel="noreferrer"
               href="https://ul.waze.com/ul?place=ChIJOzego6E7WpMRNOJUar4m2r8&ll=-15.77300930%2C-47.87615910&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
             >
               Vá até a Georgina

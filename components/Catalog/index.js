@@ -25,9 +25,9 @@ const Catalog = (props, ref) => {
     <section ref={ref} className={styles.catalog}>
       <h1>Catálogo</h1>
       <div className={styles.categories}>
-        {categories.map((category) => {
+        {categories.map((category, index) => {
           return (
-            <div className={styles.category}>
+            <div key={`catalog-${index}`} className={styles.category}>
               <div className={styles.titleWrapper}>
                 <h2>{category.title}</h2>
               </div>

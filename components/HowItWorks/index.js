@@ -37,6 +37,7 @@ const HowItWorks = (props, ref) => {
       {instructions.map((instruction, index) => {
         return (
           <div
+          key={`instruction-${index}`}
             className={`${styles.instruction}  ${
               index % 2 === 0 ? styles.even : styles.odd
             }`}
