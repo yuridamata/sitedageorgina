@@ -12,9 +12,12 @@ $menu-size: 5.5rem;
   z-index: 2;
   transition: margin-top 1s;
   margin-top: 0rem;
-
   position: fixed;
   top: 0;
+
+  @media only screen and (max-width: $phone) {
+    display: none;
+  }
 
   &.menuHidden {
     margin-top: -$menu-size;

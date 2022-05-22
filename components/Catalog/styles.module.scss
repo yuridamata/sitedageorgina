@@ -1,21 +1,40 @@
+@import "../../styles/variables.module.scss";
+
 .catalog {
   padding: 10.25rem 5.6rem;
+  @media only screen and (max-width: $phone) {
+    padding: 5rem 5.6rem;
+     
+   }
   & h1 {
     text-align: center;
     margin-bottom: 8rem;
+    @media only screen and (max-width: $phone) {
+      margin-bottom: 6rem;
+       
+     }
   }
 
   & .categories {
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+    @media only screen and (max-width: $phone) {
+     flex-flow: column;
+      
+    }
     & .category {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-flow: column;
       margin: 0rem 2rem;
-
+      @media only screen and (max-width: $phone) {
+        margin-bottom: 2rem;
+         
+       }
       & .titleWrapper{
         min-height: 6rem;
       }

@@ -4,19 +4,28 @@
   display: flex;
   padding: 10.25rem 5.6rem;
 
+  @media only screen and (max-width: $phone) {
+    padding: 2rem 2em;
+  }
+
   & .ourHistory {
     flex-grow: 1;
     max-width: 50%;
     line-height: 3rem;
-    padding: 2.7rem 1rem 6rem 1rem;
+    padding: 6rem 1rem 8rem 1rem;
     background-color: $light-brow;
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-
     border-radius: 0px 0px 0px 11.18rem;
+
+    @media only screen and (max-width: $phone) {
+      max-width: 100%;
+      line-height: 2rem;
+      border-radius: 0px 11.18rem 0px 11.18rem;
+    }
     & h1 {
       font-size: 1.5rem;
       margin-bottom: 2.1rem;
@@ -25,6 +34,7 @@
       max-width: 30rem;
       text-align: justify;
       text-indent: 50px;
+
       & p:not(:first-child) {
         margin-top: 1rem;
       }
@@ -37,6 +47,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $phone) {
+      display: none;
+    }
+
     & .squareElement {
       margin-left: 10rem;
       background-color: $light-turquoise;
@@ -46,13 +61,12 @@
       & img {
         position: absolute;
         width: 17rem;
-
       }
-      & .storeFront{
+      & .storeFront {
         top: -30%;
         left: 30%;
       }
-      & .couple{
+      & .couple {
         top: 40%;
         left: -30%;
       }

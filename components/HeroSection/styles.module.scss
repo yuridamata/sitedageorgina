@@ -10,6 +10,13 @@
   border-bottom: 10px solid $light-turquoise;
   height: 100vh;
 
+  @media only screen and (max-width: $phone) {
+    border-top: 10px solid $light-turquoise;
+    & img {
+      width: 80%;
+    }
+  }
+
   & .content {
     display: flex;
     flex-flow: column;
@@ -17,6 +24,9 @@
     justify-content: center;
     align-items: center;
     flex-grow: 4;
+    @media only screen and (max-width: $phone) {
+      flex-grow: 9;
+    }
   }
 
   .callToAction {

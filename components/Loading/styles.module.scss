@@ -10,6 +10,12 @@
   justify-content: center;
   align-items: center;
   border: 10px solid $light-turquoise;
+
+  @media only screen and (max-width: $phone) {
+    & img {
+      width: 80%;
+    }
+  }
 }
 
 .loadedWrapper {

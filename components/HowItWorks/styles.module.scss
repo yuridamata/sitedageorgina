@@ -2,9 +2,16 @@
 
 .howItWorks {
   padding: 10.25rem 5.6rem;
+
+  @media only screen and (max-width: $phone) {
+    padding: 6rem 1rem 8rem 1rem;
+  }
   & h1 {
     text-align: center;
     margin-bottom: 10.1rem;
+    @media only screen and (max-width: $phone) {
+      margin-bottom: 5rem;
+    }
   }
   & .instruction {
     display: flex;
@@ -22,6 +29,11 @@
       padding: 3em 5.5rem 5.5rem 5.5rem;
       min-width: 26rem;
 
+      @media only screen and (max-width: $phone) {
+        min-width: 100%;
+        padding: 1em;
+        
+      }
       & h2 {
         font-size: 1.5rem;
         text-decoration: underline;
@@ -31,17 +43,23 @@
 
       & p {
         line-height: 2rem;
-
+        text-indent: 50px;
         text-align: justify;
       }
 
       &.even {
         border-radius: 0px 0px 0px 11.18rem;
         flex-direction: column-reverse;
+        @media only screen and (max-width: $phone) {
+          border-radius: 0px 0px 0px 0rem;
+        }
       }
 
       &.odd {
         border-radius: 0px 0px 11.18rem 0px;
+        @media only screen and (max-width: $phone) {
+          border-radius: 0px 0px 0px 0rem;
+        }
       }
     }
     & .imgInstructionWrapper {
@@ -51,6 +69,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media only screen and (max-width: $phone) {
+        display: none;
+      }
 
       & .composition {
         width: 227px;
@@ -63,7 +85,7 @@
           height: 340px;
           top: -15%;
           left: 20%;
-          border-radius: 0px 5rem 0px 0px ;
+          border-radius: 0px 5rem 0px 0px;
         }
         & .compositionElementRight {
           background-color: $light-turquoise;

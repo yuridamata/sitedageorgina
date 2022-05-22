@@ -6,9 +6,7 @@ const HeroSection = ({ scrollToAboutUs }) => {
   return (
     <section className={styles.heroSection}>
       <div className={styles.content}>
-        <div>
-          <Image src={"/logoGeorgina.png"} width={654} height={340} />
-        </div>
+        <img src={"/logoGeorgina.png"} />
       </div>
       <div className={styles.callToAction}>
         <a onClick={() => scrollToAboutUs()}>
