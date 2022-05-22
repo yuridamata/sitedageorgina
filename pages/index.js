@@ -4,12 +4,12 @@ import Loading from "../components/Loading";
 import styles from "./indexStyles.module.scss";
 import Menu from "../components/Menu";
 import HeroSection from "../components/HeroSection";
+import AboutUs from "../components/AboutUs";
 
 const heroHeight = 700;
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     if (loading === true) {
@@ -28,8 +28,9 @@ export default function Home() {
       </Head>
       <Loading loading={loading} />
       <main>
-        <Menu scrollY={scrollY} showMenuOn={heroHeight / 3} />
+        <Menu showMenuOn={heroHeight / 3} />
         <HeroSection heroHeight={heroHeight} />
+        <AboutUs />
       </main>
 
       <footer>Footer</footer>
