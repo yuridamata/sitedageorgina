@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "Infrastructure",
-    "Menu"
+    "Menu",
+    "HeroSection"
   ]
 }
