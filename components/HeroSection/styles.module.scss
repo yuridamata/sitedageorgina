@@ -1,0 +1,40 @@
+@import "../../styles/variables.module.scss";
+@import "../../styles/animations.module.scss";
+
+.heroSection {
+  background: $dark-gray url("../../public/padraoFundo.png");
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 10px solid $light-turquoise;
+
+  & .content {
+    display: flex;
+    flex-flow: column;
+
+    justify-content: center;
+    align-items: center;
+    flex-grow: 4;
+  }
+
+  .callToAction {
+    flex-grow: 1;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    cursor: pointer;
+    animation-name: jumping;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+
+    & .arrow {
+      text-align: center;
+      transform: rotate(90deg);
+      margin-top: .6rem;
+    }
+  }
+}
