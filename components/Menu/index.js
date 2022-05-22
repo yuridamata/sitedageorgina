@@ -24,6 +24,7 @@ const Menu = ({ showMenuOn, refs, scrollFunc }) => {
     },
     {
       display: "Contato",
+      ref: refs.contactsRef,
     },
   ];
 
@@ -59,8 +60,6 @@ const Menu = ({ showMenuOn, refs, scrollFunc }) => {
               key={`menu-item-${index}`}
               className={styles.menuItem}
               onClick={() => {
-                console.log("menuItem");
-                console.log(menuItem.ref);
                 if (menuItem.ref) {
                   scrollFunc(menuItem.ref);
                 }
