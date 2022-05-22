@@ -16,6 +16,7 @@ const Menu = ({ showMenuOn, refs, scrollFunc }) => {
     },
     {
       display: "Como Funciona",
+      ref: refs.howItWorksRef,
     },
     {
       display: "Catálogo",
@@ -57,6 +58,8 @@ const Menu = ({ showMenuOn, refs, scrollFunc }) => {
               key={`menu-item-${index}`}
               className={styles.menuItem}
               onClick={() => {
+                console.log("menuItem");
+                console.log(menuItem.ref);
                 if (menuItem.ref) {
                   scrollFunc(menuItem.ref);
                 }

@@ -1,0 +1,86 @@
+@import "../../styles/variables.module.scss";
+
+.howItWorks {
+  padding: 10.25rem 5.6rem;
+  & h1 {
+    text-align: center;
+    margin-bottom: 10.1rem;
+  }
+  & .instruction {
+    display: flex;
+    margin-bottom: 6.5rem;
+    justify-content: center;
+
+    &.odd {
+      flex-direction: row-reverse;
+    }
+
+    & .textInstructionWrapper {
+      flex-grow: 1;
+      max-width: 50%;
+      background-color: $light-brow;
+      padding: 3em 5.5rem 5.5rem 5.5rem;
+      min-width: 26rem;
+
+      & h2 {
+        font-size: 1.5rem;
+        text-decoration: underline;
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+
+      & p {
+        line-height: 2rem;
+
+        text-align: justify;
+      }
+
+      &.even {
+        border-radius: 0px 0px 0px 11.18rem;
+        flex-direction: column-reverse;
+      }
+
+      &.odd {
+        border-radius: 0px 0px 11.18rem 0px;
+      }
+    }
+    & .imgInstructionWrapper {
+      position: relative;
+      flex-grow: 1;
+      max-width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & .composition {
+        width: 227px;
+        height: 340px;
+        position: relative;
+        & .compositionElementLeft {
+          background-color: $dark-gray;
+          position: absolute;
+          width: 227px;
+          height: 340px;
+          top: -15%;
+          left: 20%;
+          border-radius: 0px 5rem 0px 0px ;
+        }
+        & .compositionElementRight {
+          background-color: $light-turquoise;
+          position: absolute;
+          top: 15%;
+          left: -20%;
+          width: 227px;
+          height: 340px;
+          border-radius: 0px 0px 0px 5rem;
+        }
+
+        & img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
