@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "Infrastructure",
     "Menu",
-    "HeroSection"
+    "HeroSection",
+    "Section"
   ]
 }
