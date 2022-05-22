@@ -31,6 +31,8 @@ Then run the development server:
 npm run dev
 ```
 
+You can se the result on http://localhost:3000/
+
 ## Preview
 
 This was project was deploy on vercel in the following url: https://sitedageorgina.vercel.app/
