@@ -19,7 +19,6 @@ const AboutUs = (props, ref) => {
             especiais, venham conhecer nosso espaço que vamos atendê-los com
             todo o amor e carinho que você merece!
           </p>
-          <p>O nome do nosso espaço é uma homenagem à minha vozinha...</p>
         </div>
       </div>
       <div className={styles.composition}>

@@ -2,9 +2,7 @@
 
 .contacts {
   padding: 5rem 5.6rem;
-  background-color: $light-brow;
-
-  border-bottom: 1rem solid $light-turquoise;
+  background-color: #80d3c3;
 
   & h1 {
     text-align: center;
@@ -16,13 +14,15 @@
     justify-content: space-around;
     align-items: center;
     font-weight: bolder;
-
+    & .right {
+      border-left: 10px solid $dark-gray;
+    }
     @media only screen and (max-width: $phone) {
-     flex-flow: column;
+      flex-flow: column;
     }
 
     cursor: pointer;
-    
+
     & .contactElement {
       text-decoration: underline;
       display: flex;
@@ -33,7 +33,7 @@
       transition: all 0.5s;
       &:hover {
         transform: scale(1.1);
-        color: $light-turquoise;
+        color: $light-brow;
         text-decoration: none;
       }
       & img {
